@@ -1,0 +1,14 @@
+__pycache__/
+node_modules/
+
+.cache
+.idea
+.python-version
+.vscode/
+
+pip-log.txt
+
+# virtualenv
+.venv
+venv/
+ENV/
