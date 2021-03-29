@@ -23,6 +23,7 @@ from first_app import views
 urlpatterns = [
     url(r'^favicon\.ico$', RedirectView.as_view(url=settings.STATIC_URL + 'images/favicon.ico')),
     path('', views.index, name='Index'),
+    path('users', views.users, name='User List'),
     url(r'^first_app/', include('first_app.urls')),
     path('admin/', admin.site.urls),
 ]

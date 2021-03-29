@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{% load static %}
+{% load tz %}
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Users</title>
+    <link rel="stylesheet" href="{% static 'css/my_style.css' %}">
+</head>
+<body>
+<h1>User list</h1>
+
+<div>
+    {% if users %}
+    <table>
+        <thead>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Added</th>
+        <th>Updated</th>
+        </thead>
+
+        {% for user in users %}
+        <tr>
+            <td>{{ user.first_name|title }} {{ user.last_name | title }}</td>
+            <td>{{ user.email }}</td>
+            <td>{{ user.created_at|localtime }}</td>
+            <td>{{ user.updated_at|localtime }}</td>
+        </tr>
+        {% endfor %}
+
+    </table>
+    {% else %}
+    No user records found.
+    {% endif %}
+</div>
+</body>
+</html>
