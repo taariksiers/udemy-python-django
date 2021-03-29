@@ -6,9 +6,11 @@ node_modules/
 .python-version
 .vscode/
 
+db.sqlite3
 pip-log.txt
 
 # virtualenv
+.env/
 .venv
 venv/
 ENV/

@@ -23,6 +23,6 @@ from appTwo import views
 urlpatterns = [
     url(r'^favicon\.ico$', RedirectView.as_view(url=settings.STATIC_URL + 'images/favicon.ico')),
     path('', views.index, name='Index'),
-    path('help_me/', views.help_me, name='Help'),
+    path('users', views.users, name='User List'),
     path('admin/', admin.site.urls),
 ]
