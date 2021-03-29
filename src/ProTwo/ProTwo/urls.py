@@ -16,13 +16,13 @@ Including another URLconf
 from django.conf import settings
 from django.conf.urls import url
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, re_path
 from django.views.generic import RedirectView
 from appTwo import views
 
 urlpatterns = [
     url(r'^favicon\.ico$', RedirectView.as_view(url=settings.STATIC_URL + 'images/favicon.ico')),
-    path('', views.index, name='Index'),
+    re_path(r'^index/$|^$', views.index, name='Index'),
     path('users', views.users, name='User List'),
     path('admin/', admin.site.urls),
 ]
