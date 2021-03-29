@@ -1,0 +1,11 @@
+:is(h1, h2) {
+    color:blue
+}
+
+body {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+.table, th, td {
+    border: 1px solid black;
+}

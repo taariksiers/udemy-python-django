@@ -62,4 +62,20 @@ python manage.py createsuperuser
 ## Lecture 129 - Population Scripts
 Install faker (already done via [requirements](README.md#requirementstxt))
 
-## Lecture 130 - Model View Templates
+## Lecture 130:132 - Model View Templates
+
+```bash
+# migration
+./manage.py makemigrations && ./manage.py migrate
+# populating
+python populate_users.py
+# rollback
+./manage.py migrate first_app 0001_initial
+```
+
+## Lecture 135:138 - Forms
+
+```bash
+django-admin startproject basicforms
+django-admin startapp basicapp
+```
