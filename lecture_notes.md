@@ -54,10 +54,12 @@ print(Topic.objects.all())
 # <QuerySet [<Topic: Social Network>]>
 quit()
 ```
-Create a [superuser](README.md#Super User)
+Create a [superuser](README.md#Super-User)
 ```bash
 python manage.py createsuperuser
 ```
 
 ## Lecture 129 - Population Scripts
 Install faker (already done via [requirements](README.md#requirementstxt))
+
+## Lecture 130 - Model View Templates

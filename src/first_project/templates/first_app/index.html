@@ -7,12 +7,29 @@
         <link rel="stylesheet" href="{% static 'css/my_style.css' %}">
     </head>
     <body>
-        <h1>Hello this is index.html</h1>
-        {{ insert_me }}
+        <h1>Hi, welcome to django level two!</h1>
+        <h2> here are your access records</h2>
 
-        <h2> Here is the favicon </h2>
+            <div class="djangotwo">
+                {% if access_records %}
+                    <table>
+                        <thead>
+                        <th>Site Name</th>
+                        <th>Date Requested</th>
+                        </thead>
 
-        <img src="{% static 'images/favicon.ico' %}" alt="favicon">
 
+                    {% for access_record in access_records %}
+                    <tr>
+                        <td>{{ access_record.name }}</td>
+                        <td>{{ access_record.date }}</td>
+                    </tr>
+                    {% endfor %}
+
+                    </table>
+                {% else %}
+                    No records found.
+                {% endif %}
+            </div>
     </body>
 </html>
