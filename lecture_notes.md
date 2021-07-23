@@ -79,3 +79,20 @@ python populate_users.py
 django-admin startproject basicforms
 django-admin startapp basicapp
 ```
+
+# Section 19 - Django Level Four
+
+## Lecture 140-146
+
+```bash
+mkdir -p src/django_level_four && cd src/django_level_four
+django-admin startproject learning_templates
+django-admin startapp basic_app
+mkdir -p basic_app/templates/basic_app
+
+# Lecture 141
+./src/django_level_four/learning_templates/manage.py runserver
+./src/django_level_four/learning_templates/manage.py migrate
+./src/django_level_four/learning_templates/manage.py createsuperuser
+/Users/taarik.siers/Workspace/udemy-python-django/lecture_notes.md
+```

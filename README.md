@@ -17,7 +17,7 @@ Link: [Python and Django Full Stack Web Developer Bootcamp](https://www.udemy.co
 
 ```bash
 python -m pip install -r src/requirements-to-freeze.txt --upgrade
-python -m pip freeze > src/requirements.tx
+python -m pip freeze > src/requirements.txt
 ```
 ## Super User
 ```
