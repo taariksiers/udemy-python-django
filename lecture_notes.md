@@ -94,5 +94,33 @@ mkdir -p basic_app/templates/basic_app
 ./src/django_level_four/learning_templates/manage.py runserver
 ./src/django_level_four/learning_templates/manage.py migrate
 ./src/django_level_four/learning_templates/manage.py createsuperuser
-/Users/taarik.siers/Workspace/udemy-python-django/lecture_notes.md
+```
+
+# Section 20 - Django Level Five - Authentication
+
+## Lecture 147-154 - [Slides](https://docs.google.com/presentation/d/1uKZ61h4A_tfv9Nz_YYnQJfzpJVxooB5QCGtDJq2eVks/edit#slide=id.g1ed58b0fce_0_28)
+
+### Lecture 148
+```bash
+mkdir -p src/django_level_five && cd src/django_level_five
+django-admin startproject learning_users
+cd learning_users
+mkdir -p templates/basic_app static media/profile_pics
+django-admin startapp basic_app
+
+./manage.py migrate
+./manage.py makemigrations basic_app
+./manage.py migrate
+
+python -m pip install bcrypt
+python -m pip install django[argon2]
+```
+
+### Lecture 151
+Mark `learning_users` as sources root in Pycharm. Exclude `django_level_four` `learning_templates` directory (same app name).
+
+```bash
+python -m pip install pillow
+./manage.py makemigrations basic_app
+./manage.py migrate
 ```
