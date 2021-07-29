@@ -124,3 +124,20 @@ python -m pip install pillow
 ./manage.py makemigrations basic_app
 ./manage.py migrate
 ```
+
+
+# Section 22 - Advanced Topics - CBVs
+
+## Lecture 159 - 163
+
+```bash
+django-admin startproject advcbv
+django-admin startapp advanced_section
+
+./manage.py migrate
+./manage.py makemigrations basic_app
+./manage.py migrate
+
+./manage.py createsuperuser admin
+
+```
