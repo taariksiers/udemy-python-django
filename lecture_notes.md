@@ -138,6 +138,24 @@ django-admin startapp advanced_section
 ./manage.py makemigrations basic_app
 ./manage.py migrate
 
-./manage.py createsuperuser admin
+`./manage.py createsuperuser`
 
+```
+
+
+# Section 23 - First Clone Project
+
+## Lecture 164 - 174
+
+```bash
+django-admin startproject mysite
+cd mysite
+django-admin startapp blog
+touch mysite/urls.py mysite/forms.py
+
+./manage.py migrate
+./manage.py makemigrations blog
+./manage.py migrate
+
+./manage.py createsuperuser
 ```
