@@ -31,6 +31,8 @@ python manage.py runserver
 python manage.py migrate
 ```
 
+<hr>
+
 # Section 17 -  Django Level Two
 
 ## Lecture 128 - Creating Models
@@ -80,6 +82,12 @@ django-admin startproject basicforms
 django-admin startapp basicapp
 ```
 
+## Lecture 138
+appTwo / ProTwo
+
+
+<hr>
+
 # Section 19 - Django Level Four
 
 ## Lecture 140-146
@@ -95,6 +103,8 @@ mkdir -p basic_app/templates/basic_app
 ./src/django_level_four/learning_templates/manage.py migrate
 ./src/django_level_four/learning_templates/manage.py createsuperuser
 ```
+
+<hr>
 
 # Section 20 - Django Level Five - Authentication
 
@@ -125,6 +135,7 @@ python -m pip install pillow
 ./manage.py migrate
 ```
 
+<hr>
 
 # Section 22 - Advanced Topics - CBVs
 
@@ -142,7 +153,6 @@ django-admin startapp advanced_section
 
 ```
 
-
 # Section 23 - First Clone Project
 
 ## Lecture 164 - 174
@@ -159,3 +169,151 @@ touch mysite/urls.py mysite/forms.py
 
 ./manage.py createsuperuser
 ```
+
+<hr>
+
+# Section 24 - Social Media Site Clone
+
+## Lecture 175 - 178
+
+```bash
+mkdir -p simple_social_clone && cd simple_social_clone
+django-admin startproject simplesocial
+cd simplesocial
+django-admin startapp accounts
+mkdir -p templates
+mkdir -p static/simplesocial/css
+mkdir -p static/simplesocial/js
+mkdir -p static/css
+mkdir -p static/images
+touch static/css/main.css
+
+./manage.py migrate
+./manage.py makemigrations
+./manage.py migrate
+./manage.py runserver
+```
+
+## Lecture 179
+
+```bash
+./manage.py makemigrations accounts
+./manage.py migrate
+
+./manage.py createsuperuser # admin hello123
+```
+
+## Lecture 180
+
+```bash
+cd simple_social_clone/simplesocial
+django-admin startapp posts
+django-admin startapp groups
+
+mkdir -p posts/templates/posts
+mkdir -p groups/templates/groups
+
+touch posts/templates/posts/post_base.html
+touch posts/templates/posts/post_confirm_delete.html
+touch posts/templates/posts/post_detail.html
+touch posts/templates/posts/post_form.html
+touch posts/templates/posts/post_list.html
+touch posts/templates/posts/user_post_list.html
+touch posts/templates/posts/_post.html
+
+touch posts/forms.py
+touch posts/urls.py
+
+touch groups/templates/groups/group_base.html
+touch groups/templates/groups/group_detail.html
+touch groups/templates/groups/group_form.html
+touch groups/templates/groups/group_list.html
+
+touch groups/urls.py
+
+```
+
+## Lecture 187
+
+```bash
+
+./manage.py makemigrations
+./manage.py migrate
+
+```
+
+## Lecture 188
+
+https://stackoverflow.com/questions/70319606/importerror-cannot-import-name-url-from-django-conf-urls-after-upgrading-to
+
+
+## Lecture 188
+
+https://stackoverflow.com/questions/27213752/collecting-staticfiles-throws-improperlyconfigured
+
+<hr>
+
+# Section 25 - Debug Toolbar
+
+## Lecture 189
+
+`settings.py`
+
+```python
+INSTALLED_APPS = [
+     'django.contrib.sessions',
+     'django.contrib.messages',
+     'django.contrib.staticfiles',
++    'debug_toolbar',
+     'appTwo'
+ ]
+
+MIDDLEWARE = [
+     'django.contrib.auth.middleware.AuthenticationMiddleware',
+     'django.contrib.messages.middleware.MessageMiddleware',
+     'django.middleware.clickjacking.XFrameOptionsMiddleware',
++    'debug_toolbar.middleware.DebugToolbarMiddleware',
+ ]
+
+ INTERNAL_IPS = ['127.0.0.1']
+ ```
+
+<hr>
+
+# Section 26 - Advanced Topics: Customising the Django Admin
+
+Lectures 191 - Lecture 197
+
+## Lecture 191
+
+
+```bash
+
+django-admin startproject my_video_rental
+
+cd my_video_rental/
+
+django-admin startapp videos
+
+```
+
+Edit `settings.py`
+
+- add to `INSTALLED_APPS`
+- update general settings inline with previous lectures
+
+Add models (`Movie` and `Customer`)
+
+Add models to admin register (`admin.py`)
+
+Make and run migrations, add super user and run server
+
+```bash
+./manage.py makemigrations && ./manage.py migrate videos
+./manage.py createsuperuser
+./manage.py runserver
+```
+
+Add some more custom stuff to the models
+
+## Lecture 192

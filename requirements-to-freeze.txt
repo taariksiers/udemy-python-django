@@ -1,0 +1,12 @@
+argon2-cffi
+bcrypt
+Django
+django-bootstrap4
+django-braces
+django-debug-toolbar
+Faker
+ipython
+misaka
+mock
+mysqlclient
+Pillow

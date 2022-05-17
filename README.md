@@ -14,12 +14,12 @@ Link: [Python and Django Full Stack Web Developer Bootcamp](https://www.udemy.co
 ## requirements.txt
 
 ```bash
-python -m pip install -r src/requirements-to-freeze.txt --upgrade
-python -m pip freeze > src/requirements.txt
+python -m pip install -r requirements-to-freeze.txt --upgrade
+python -m pip freeze > requirements.txt
 ```
 ## Super User
 ```python
-./manage.py createsuperuser
+./manage.py createsuperuser [username]
 ```
 
 
