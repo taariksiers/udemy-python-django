@@ -80,3 +80,6 @@ Line 136 - `TIME_ZONE`
 ```python
 TIME_ZONE = 'Africa/Johannesburg'
 ```
+
+## Completed
+🏁 [Certificate](https://www.udemy.com/certificate/UC-3e289983-25ff-42ed-8216-0acf05cf9fc1/)

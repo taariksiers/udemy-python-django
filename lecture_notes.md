@@ -317,3 +317,10 @@ Make and run migrations, add super user and run server
 Add some more custom stuff to the models
 
 ## Lecture 192
+
+```bash
+cd src/my_video_rental
+mkdir -p templates/admin
+```
+
+Go to https://github.com/django/django/tree/main/django/contrib/admin/templates

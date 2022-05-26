@@ -2,6 +2,21 @@ from django.contrib import admin
 
 from .models import Customer, Movie
 
-# Register your models here.
+# non overriden models
+admin.site.register([Customer])
 
-admin.site.register([Customer, Movie])
+class MovieAdmin(admin.ModelAdmin):
+
+    fields = ["release_year", "title", "length"]
+
+    search_fields = ["title", "length"]
+
+    list_filter = ["release_year", "length"]
+
+    list_display = ["title", "release_year", "length"]
+
+    list_editable = ["length"]
+
+
+# tuplised instead of list to avoid _meta error - package override with based on model
+admin.site.register(Movie, MovieAdmin)
