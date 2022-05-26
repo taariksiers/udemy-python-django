@@ -83,3 +83,5 @@ TIME_ZONE = 'Africa/Johannesburg'
 
 ## Completed
 🏁 [Certificate](https://www.udemy.com/certificate/UC-3e289983-25ff-42ed-8216-0acf05cf9fc1/)
+
+<img src="https://udemy-certificate.s3.amazonaws.com/image/UC-3e289983-25ff-42ed-8216-0acf05cf9fc1.jpg?v=1653552939000" width=25% height=25%>
