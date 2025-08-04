@@ -12,7 +12,8 @@ src/blog_project/mysite/static
 src/blog_project/mysite/staticfiles
 
 # virtualenv
+ENV/
 .env/
 .venv
 venv/
-ENV/
+virtualenv/
